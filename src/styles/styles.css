@@ -68,7 +68,7 @@ main {
   }
 }
 
-/*---- Header Styles */
+/*---- Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -117,5 +117,23 @@ header {
     @media only screen and (max-width: 420px) {
       font-size: 0.875rem;
     }
+  }
+}
+
+/*---- Notifications List */
+.list-container {
+  /* border: var(--inspect); */
+  margin-top: 31px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & article {
+    border: var(--inspect);
+    width: 100%;
+    padding: 18px;
+    /* height: 80px; */
+    border-radius: 8px;
   }
 }
