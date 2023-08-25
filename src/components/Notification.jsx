@@ -10,9 +10,21 @@ const Notification = ({
   timestamp,
 }) => {
   return (
-    <article>
-      <img src={avatar} alt={user} />
-      <p>{user}</p>
+    <article style={{ background: newPost ? "#f7fafd" : "transparant" }}>
+      <img src={avatar} alt={user} className="avatar" />
+      <div className="info-wrapper">
+        <div className="actions-row">
+          <p className="username">{user}</p>
+          <p className="activity">{activity}</p>
+          {referalPost != "" ? (
+            <p className="referal-post">{referalPost}</p>
+          ) : null}
+          {referalGroup != "" ? (
+            <p className="referal-group">{referalGroup}</p>
+          ) : null}
+        </div>
+        <p className="time-stamp">{timestamp}</p>
+      </div>
     </article>
   );
 };

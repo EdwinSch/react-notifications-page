@@ -68,7 +68,7 @@ main {
   }
 }
 
-/*---- Header */
+/*---- Header Component */
 header {
   display: flex;
   justify-content: space-between;
@@ -128,12 +128,58 @@ header {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
 
-  & article {
-    border: var(--inspect);
-    width: 100%;
-    padding: 18px;
-    /* height: 80px; */
-    border-radius: 8px;
+/*---- Notification Component */
+& article {
+  /* border: var(--inspect); */
+  width: 100%;
+  padding: 18px;
+  /* height: 80px; */
+  border-radius: 8px;
+  display: flex;
+  gap: 19px;
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .info-wrapper {
+    /* props? */
+
+    .actions-row {
+      .username {
+        display: inline;
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--textAccent);
+        text-transform: capitalize;
+      }
+      .activity {
+        display: inline;
+        margin-left: 7px;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .referal-post {
+        display: inline;
+        margin-left: 7px;
+        font-size: 1rem;
+        font-weight: 800;
+      }
+      .referal-group {
+        display: inline;
+        margin-left: 7px;
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--accentClr);
+      }
+    }
+  }
+  .time-stamp {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--textSecondary);
   }
 }
