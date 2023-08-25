@@ -16,14 +16,19 @@ const Notification = ({
         <div className="actions-row">
           <p className="username">{user}</p>
           <p className="activity">{activity}</p>
-          {referalPost != "" ? (
-            <p className="referal-post">{referalPost}</p>
-          ) : null}
-          {referalGroup != "" ? (
+          {/* Ref post */}
+          {referalPost != "" && <p className="referal-post">{referalPost}</p>}
+          {/* Ref group */}
+          {referalGroup != "" && (
             <p className="referal-group">{referalGroup}</p>
-          ) : null}
+          )}
+          {/* alert dot */}
+          {newPost && <div className="alert-dot"></div>}
         </div>
+        {/* timestamp */}
         <p className="time-stamp">{timestamp}</p>
+        {/* private message */}
+        {privateMsg && <p className="private-msg-wrapper">{privateText}</p>}
       </div>
     </article>
   );
