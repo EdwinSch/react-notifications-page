@@ -134,6 +134,7 @@ header {
   width: 100%;
   padding: 18px;
   border-radius: 8px;
+  background: transparent;
   border: 1px solid transparent;
   display: flex;
   gap: 19px;
@@ -228,4 +229,8 @@ header {
       font-size: 0.875rem;
     }
   }
+}
+
+.unread {
+  background: var(--backgrMain);
 }

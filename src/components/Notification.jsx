@@ -1,4 +1,5 @@
 const Notification = ({
+  id,
   newPost,
   user,
   avatar,
@@ -8,9 +9,10 @@ const Notification = ({
   privateMsg,
   privateText,
   timestamp,
+  markRead,
 }) => {
   return (
-    <article style={{ background: newPost ? "#f7fafd" : "transparant" }}>
+    <article onClick={() => markRead(id)} className={newPost ? "unread" : null}>
       <img src={avatar} alt={user} className="avatar" />
       <div className="info-wrapper">
         <div className="actions-row">
