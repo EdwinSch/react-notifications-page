@@ -7,7 +7,7 @@ import { useState } from "react";
 function App() {
   const [data, setData] = useState(notifications);
 
-  // Mark unread as read
+  // Mark single notification as read
   const markRead = (id) => {
     const newItems = data.map((item) => {
       if (item.id === id) {
@@ -19,10 +19,19 @@ function App() {
     setData(newItems);
   };
 
+  // Mark aLL notifications as read
+  const markAll = () => {
+    const newItems = data.map((item) => {
+      const newItem = { ...item, newPost: false };
+      return newItem;
+    });
+    setData(newItems);
+  };
+
   // RENDER app
   return (
     <main>
-      <Header data={data} />
+      <Header data={data} markAll={markAll} />
       <NotificationsList data={data} markRead={markRead} />
     </main>
   );
