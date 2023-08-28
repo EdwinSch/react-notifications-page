@@ -22,7 +22,11 @@ function App() {
       return item;
     });
     setData(newItems);
-    countNewItems();
+    // Update Counter
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+    return;
   };
 
   // Mark ALL notifications as read
@@ -32,7 +36,7 @@ function App() {
       return newItem;
     });
     setData(newItems);
-    countNewItems();
+    setCounter(0);
   };
 
   // Count unread notifications
