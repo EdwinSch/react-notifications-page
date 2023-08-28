@@ -1,14 +1,16 @@
-## Main header (prj title)
+## Notifications Page (React)
 
 Project description
 
 ### Live Demo
 
-🚀 [Deployed App](https://)
+🚀 [Deployed App](https://extraordinary-pegasus-23f3ca.netlify.app/)
 
 #### 🛠️ Build with
 
 - React
+- CSS
+- Vite
 
 #### 💻 Run this project
 
