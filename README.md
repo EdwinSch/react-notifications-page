@@ -1,6 +1,7 @@
 ## Notifications Page (React)
 
-Project description
+This small React project is a (mocked) social media notification page. Users can mark new notifications as read.
+Showcasing: data mapping, state handling and dynamic styling.
 
 ### Live Demo
 
